@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy Policy for Hub Assistant by A.I MY.">
+  <title>Privacy Policy — Hub Assistant</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#content">Skip to content</a>
+<header>
+  <div class="header-inner">
+    <p class="brand">Hub Assistant <small>Published by A.I MY</small></p>
+    <nav aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
+      <a href="safeguarding.html">Safeguarding</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+<main id="content">
+  <section class="hero">
+    <h1>Hub Assistant Privacy Policy</h1>
+    <p class="meta">Publisher / copyright holder: <strong>A.I MY</strong><br>Reference release: 8J-R2 LIVE PASS · Manifest version 1.9.7<br>Effective date: 20 September 2026<br>Privacy contact: <a href="mailto:thiaimynguyen734@gmail.com">thiaimynguyen734@gmail.com</a></p>
+    <div class="lang-jump"><a href="#en">English</a><a href="#vi">Tiếng Việt</a></div>
+  </section>
+
+  <div class="notice">
+    <strong>Scope note:</strong> This policy describes the current data-handling design of Hub Assistant. It is a product privacy statement, not a legal certification or legal advice. Deployment-specific school policy and jurisdiction-specific requirements must be reviewed separately.
+  </div>
+
+  <section id="en" class="card">
+    <h2>English</h2>
+
+    <h3>1. What Hub Assistant is</h3>
+    <p>Hub Assistant is a teacher-facing browser extension that provides contextual guidance on supported PowerSchool / PowerHub educator pages. It helps teachers understand interface context and complete workflows while keeping final actions under teacher control.</p>
+    <p>Hub Assistant is independently developed by A.I MY. It is not an official PowerSchool, Microsoft, or Google product and does not claim endorsement by those companies.</p>
+    <p>The current release is limited to the supported educator site: <code>https://vas.educator.powerschool.com/*</code>.</p>
+
+    <h3>2. Intended users</h3>
+    <p>Hub Assistant is designed for teachers and authorized school staff. It is not designed as a student-facing service, social network, advertising service, or student profiling system.</p>
+
+    <h3>3. Information the extension may access locally</h3>
+    <p>To provide teacher-facing guidance, the extension may read information already visible in the supported PowerSchool / PowerHub page when relevant, including:</p>
+    <ul>
+      <li>names displayed by PowerSchool;</li>
+      <li>student, guardian, or account role labels;</li>
+      <li>class, audience, and relationship context used to identify the correct teacher workflow;</li>
+      <li>interface state, buttons, dialogs, tabs, and navigation context;</li>
+      <li>information displayed within Messages or Newsfeed surfaces when needed to determine the current guidance state;</li>
+      <li>assistant-language and display preferences; and</li>
+      <li>walkthrough, onboarding, and contextual-help progress.</li>
+    </ul>
+
+    <h3>4. Information the extension does not intentionally collect</h3>
+    <p>The current release does not intentionally collect or create a database of passwords, authentication cookies or tokens, payment information, health information, precise location, unrelated browsing history, advertising identifiers, student behavioral profiles, persistent student nicknames, or persistent student-profile records.</p>
+    <p>Hub Assistant does not use A.I MY analytics, telemetry, advertising trackers, or behavioral advertising in the current release.</p>
+
+    <h3>5. How personal information is processed</h3>
+    <p>Names and other PowerSchool identity context may be processed transiently in the browser while the supported page is active so the extension can provide the requested teacher-facing guidance.</p>
+    <p>The current release uses in-memory page/runtime structures for transient student/guardian identity context. It does not create a persistent student nickname/profile database.</p>
+    <p>The extension does not send student names, guardian names, message content, Newsfeed content, or teacher workflow data to a server controlled by A.I MY or to an analytics provider.</p>
+    <p>Normal network traffic between the browser and PowerSchool is part of the PowerSchool service itself and is outside Hub Assistant's own data-transmission behavior.</p>
+
+    <h3>6. Information stored by the extension</h3>
+    <p>The extension uses browser extension storage for product settings and progress, such as assistant-language choices, walkthrough/onboarding progress, contextual-help preferences, and name-display preference. These settings are not intended to store student or guardian profiles.</p>
+    <p>Earlier development versions used legacy student nickname/profile storage keys. The current release retains an install/update cleanup routine for <code>studentNicknames</code>, <code>studentProfiles</code>, and <code>psqmStorageVersion</code> so obsolete nickname/profile data can be removed during install/update.</p>
+
+    <h3>7. Sharing and external transmission</h3>
+    <p>The current release does not sell or broker personal information; share student or guardian information with advertisers; transmit student or guardian information to an A.I MY backend; use third-party analytics or telemetry services; use Microsoft Graph or Google Identity; or synchronize a student nickname/profile database to the cloud.</p>
+
+    <h3>8. Child safeguarding and educational use</h3>
+    <p>Hub Assistant follows a data-minimization approach. Student/guardian identity context is used only when necessary for a teacher-facing workflow. The current release does not build commercial or behavioral profiles of children, does not display advertising, and does not automatically perform final teacher actions such as Send, Create Group, or Publish.</p>
+    <p>PowerSchool / PowerHub remains the authoritative source of school data and workflow state.</p>
+
+    <h3>9. Teacher control</h3>
+    <p>Hub Assistant may guide or assist intermediate interface steps, but final consequential actions remain teacher-controlled. The current release does not automatically execute the final Send, Create Group, or Publish action on behalf of the teacher.</p>
+
+    <h3>10. Security design</h3>
+    <p>The current manifest uses Manifest V3 and requests only the <code>storage</code> permission plus host access to <code>https://vas.educator.powerschool.com/*</code>. The audited release does not include remote executable code, an A.I MY analytics service, <code>eval</code>, or <code>new Function</code>.</p>
+
+    <h3>11. Retention and deletion</h3>
+    <p>Hub Assistant does not intentionally persist student nickname/profile records in the current release. Transient page/runtime identity context lasts only as needed for the active browser/page workflow. Extension preferences and progress may remain in browser extension storage until changed, cleared through browser/extension administration, or the extension is removed, subject to browser behavior and school device-management policy.</p>
+
+    <h3>12. GitHub Pages website hosting</h3>
+    <p>This privacy/support website contains no A.I MY analytics, advertising, tracking scripts, data-entry forms, or external JavaScript. It is hosted using GitHub Pages. GitHub states that visitor IP addresses are logged and stored for security purposes when GitHub Pages sites are visited. That hosting-provider processing is separate from the Hub Assistant browser extension.</p>
+    <p>See GitHub's own privacy documentation for GitHub-hosted infrastructure practices.</p>
+
+    <h3>13. School deployment and account model</h3>
+    <p>This policy does not assume a particular Edge profile, Chrome profile, managed-browser configuration, or device-sharing model. Schools should separately determine appropriate account, device-sharing, access-control, retention, user-notice, and incident-handling practices.</p>
+
+    <h3>14. Policy changes</h3>
+    <p>This policy should be reviewed whenever the extension adds a new permission, broader host access, external service, analytics capability, identity provider, persistent student-data feature, student-facing workflow, or materially different teacher workflow.</p>
+
+    <h3>15. Contact</h3>
+    <address>Privacy and support questions: <a href="mailto:thiaimynguyen734@gmail.com">thiaimynguyen734@gmail.com</a></address>
+  </section>
+
+  <section id="vi" class="card" lang="vi">
+    <h2>Chính sách quyền riêng tư</h2>
+
+    <h3>1. Hub Assistant là gì</h3>
+    <p>Hub Assistant là tiện ích trình duyệt dành cho giáo viên, cung cấp hướng dẫn theo ngữ cảnh trên các trang PowerSchool / PowerHub dành cho giáo viên được hỗ trợ. Các hành động cuối cùng vẫn do giáo viên kiểm soát.</p>
+    <p>Hub Assistant được A.I MY phát triển độc lập. Đây không phải sản phẩm chính thức của PowerSchool, Microsoft hoặc Google và không tuyên bố được các công ty này bảo trợ hay chứng nhận.</p>
+    <p>Build hiện tại chỉ hoạt động trên trang giáo viên được hỗ trợ: <code>https://vas.educator.powerschool.com/*</code>.</p>
+
+    <h3>2. Đối tượng sử dụng</h3>
+    <p>Hub Assistant được thiết kế cho giáo viên và nhân viên trường học được ủy quyền. Tiện ích không được thiết kế như dịch vụ dành trực tiếp cho học sinh, mạng xã hội, dịch vụ quảng cáo hay hệ thống lập hồ sơ học sinh.</p>
+
+    <h3>3. Thông tin tiện ích có thể đọc cục bộ</h3>
+    <p>Để cung cấp hướng dẫn cho giáo viên, tiện ích có thể đọc thông tin đang hiển thị trên trang PowerSchool / PowerHub được hỗ trợ khi cần, gồm tên do PowerSchool hiển thị, vai trò tài khoản, ngữ cảnh lớp/audience/quan hệ, trạng thái giao diện, nội dung đang hiển thị trong Messages hoặc Newsfeed khi cần xác định bước hướng dẫn, và các lựa chọn/ngữ cảnh tiến độ của chính extension.</p>
+
+    <h3>4. Thông tin tiện ích không chủ động thu thập</h3>
+    <p>Build hiện tại không chủ động tạo cơ sở dữ liệu về mật khẩu, cookie/token xác thực, dữ liệu tài chính, dữ liệu sức khỏe, vị trí chính xác, lịch sử duyệt web không liên quan, advertising identifier, hồ sơ hành vi học sinh, nickname học sinh lưu lâu dài hoặc hồ sơ học sinh lưu lâu dài.</p>
+    <p>Build hiện tại không sử dụng analytics, telemetry, quảng cáo theo dõi hoặc quảng cáo hành vi của A.I MY.</p>
+
+    <h3>5. Cách xử lý dữ liệu cá nhân</h3>
+    <p>Tên và ngữ cảnh định danh từ PowerSchool có thể được xử lý tạm thời trong trình duyệt khi trang được hỗ trợ đang hoạt động để cung cấp hướng dẫn cho giáo viên. Build hiện tại không tạo cơ sở dữ liệu nickname/hồ sơ học sinh lưu lâu dài.</p>
+    <p>Build hiện tại không gửi tên học sinh, tên người giám hộ, nội dung tin nhắn, nội dung Newsfeed hoặc dữ liệu workflow của giáo viên tới máy chủ do A.I MY kiểm soát hoặc nhà cung cấp analytics.</p>
+
+    <h3>6. Dữ liệu extension lưu</h3>
+    <p>Extension sử dụng browser extension storage để lưu cài đặt và tiến độ sản phẩm như ngôn ngữ trợ lý, walkthrough/onboarding, contextual help và tùy chọn hiển thị tên. Các setting này không nhằm lưu hồ sơ học sinh hoặc người giám hộ.</p>
+    <p>Để dọn dữ liệu từ phiên bản cũ, build hiện tại giữ routine cleanup cho các key <code>studentNicknames</code>, <code>studentProfiles</code> và <code>psqmStorageVersion</code>.</p>
+
+    <h3>7. Chia sẻ và truyền dữ liệu ra ngoài</h3>
+    <p>Build hiện tại không bán hoặc môi giới dữ liệu cá nhân, không chia sẻ dữ liệu học sinh/người giám hộ cho nhà quảng cáo, không truyền dữ liệu này tới backend A.I MY, không dùng analytics/telemetry của bên thứ ba, không dùng Microsoft Graph/Google Identity và không đồng bộ cơ sở dữ liệu nickname/hồ sơ học sinh lên cloud.</p>
+
+    <h3>8. Safeguarding trẻ em</h3>
+    <p>Hub Assistant áp dụng nguyên tắc giảm thiểu dữ liệu. Ngữ cảnh học sinh/người giám hộ chỉ được dùng khi cần cho workflow của giáo viên. Build hiện tại không lập hồ sơ thương mại/hành vi của trẻ em, không hiển thị quảng cáo và không tự động thực hiện hành động cuối cùng như Send, Create Group hoặc Publish.</p>
+    <p>PowerSchool / PowerHub vẫn là nguồn dữ liệu và trạng thái workflow chính thức.</p>
+
+    <h3>9. Quyền kiểm soát của giáo viên</h3>
+    <p>Hub Assistant có thể hướng dẫn bước trung gian nhưng hành động cuối cùng có hậu quả vẫn do giáo viên kiểm soát. Tiện ích không tự động thực hiện Send, Create Group hoặc Publish thay giáo viên.</p>
+
+    <h3>10. Thiết kế bảo mật</h3>
+    <p>Manifest hiện tại dùng Manifest V3, chỉ yêu cầu quyền <code>storage</code> và host <code>https://vas.educator.powerschool.com/*</code>. Build đã audit không chứa remote executable code, dịch vụ analytics của A.I MY, <code>eval</code> hoặc <code>new Function</code>.</p>
+
+    <h3>11. Lưu giữ và xóa dữ liệu</h3>
+    <p>Hub Assistant không chủ động lưu lâu dài nickname/hồ sơ học sinh trong build hiện tại. Ngữ cảnh định danh tạm thời chỉ tồn tại khi cần cho phiên trang/browser đang hoạt động. Các setting và tiến độ của extension có thể còn trong browser extension storage cho tới khi được thay đổi, xóa bởi quản trị trình duyệt/extension hoặc extension bị gỡ.</p>
+
+    <h3>12. Hosting website bằng GitHub Pages</h3>
+    <p>Website privacy/support này không chứa analytics, quảng cáo, tracking script, form nhập dữ liệu hoặc external JavaScript của A.I MY. Website được host bằng GitHub Pages. Theo tài liệu GitHub, địa chỉ IP của người truy cập GitHub Pages có thể được GitHub ghi nhận và lưu cho mục đích bảo mật. Việc xử lý ở tầng hosting này tách biệt với Hub Assistant extension.</p>
+
+    <h3>13. Triển khai tại trường</h3>
+    <p>Policy này không giả định mỗi giáo viên có profile Edge/Chrome riêng hoặc một mô hình thiết bị cụ thể. Trường cần đánh giá riêng account, thiết bị dùng chung, access control, retention, user notice và quy trình xử lý sự cố.</p>
+
+    <h3>14. Thay đổi policy</h3>
+    <p>Policy cần được xem lại trước khi phát hành phiên bản thêm permission/host mới, backend ngoài, analytics, identity provider, dữ liệu học sinh lưu lâu dài, student-facing workflow hoặc workflow giáo viên thay đổi đáng kể.</p>
+
+    <h3>15. Liên hệ</h3>
+    <address>Câu hỏi về privacy/support: <a href="mailto:thiaimynguyen734@gmail.com">thiaimynguyen734@gmail.com</a></address>
+  </section>
+</main>
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 A.I MY. All rights reserved.</p>
+    <p>Contact: <a href="mailto:thiaimynguyen734@gmail.com">thiaimynguyen734@gmail.com</a></p>
+  </div>
+</footer>
+</body>
+</html>
