@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Child safeguarding and student data statement for Hub Assistant by A.I MY.">
+  <title>Child Safeguarding — Hub Assistant</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#content">Skip to content</a>
+<header>
+  <div class="header-inner">
+    <p class="brand">Hub Assistant <small>Published by A.I MY</small></p>
+    <nav aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="safeguarding.html" aria-current="page">Safeguarding</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+<main id="content">
+  <section class="hero">
+    <h1>Child Safeguarding & Student Data Statement</h1>
+    <p class="meta">Publisher: <strong>A.I MY</strong> · Reference release: 8J-R2 LIVE PASS · Date: 20 September 2026 · Contact: <a href="mailto:thiaimynguyen734@gmail.com">thiaimynguyen734@gmail.com</a></p>
+  </section>
+
+  <div class="notice"><strong>Important:</strong> This statement documents product safeguards. It is not a legal certification and does not replace school policy, safeguarding procedures, data-protection review, or jurisdiction-specific legal advice.</div>
+
+  <section class="card">
+    <h2>Purpose and audience</h2>
+    <p>Hub Assistant is designed for teachers and authorized school staff using supported PowerSchool / PowerHub educator pages. It is not designed as a student-facing application.</p>
+    <p>The extension provides contextual guidance while preserving teacher control and keeping PowerSchool / PowerHub as the official source of school data and workflow state.</p>
+
+    <h2>Safeguarding principles</h2>
+    <h3>1. Data minimization</h3>
+    <p>Hub Assistant should access only the page information required to identify the current teacher workflow and provide relevant guidance. The current release does not maintain a persistent student nickname/profile database.</p>
+
+    <h3>2. Local and transient processing</h3>
+    <p>Student/guardian names, roles, relationship context, class context, and related page state may be processed transiently in the browser when needed for a teacher-facing workflow. The current release does not send this information to an A.I MY backend, analytics service, advertising service, Microsoft Graph, Google Identity, or another cloud identity service.</p>
+
+    <h3>3. No student profiling or advertising</h3>
+    <p>The current release does not create commercial or behavioral profiles of students, use student information for advertising, display targeted advertising, sell or broker student information, or use student information for unrelated product analytics.</p>
+
+    <h3>4. Teacher control</h3>
+    <p>The extension may guide intermediate interface actions but does not automatically perform the final consequential action for sending a message, creating a Group Chat, or publishing a Newsfeed post.</p>
+
+    <h3>5. Identity safety</h3>
+    <p>Where recipient matching is used, the design preserves native/original PowerSchool identity evidence and role matching rather than relying on approximate or nickname matching.</p>
+
+    <h3>6. Legacy data minimization</h3>
+    <p>The current release includes install/update cleanup for legacy keys <code>studentNicknames</code>, <code>studentProfiles</code>, and <code>psqmStorageVersion</code>. No new persistent student nickname/profile records are created by the current release.</p>
+
+    <h3>7. No credential collection</h3>
+    <p>The current release is not designed to collect PowerSchool passwords, browser cookies, session tokens, authentication tokens, payment data, or health data.</p>
+
+    <h3>8. Minimum permissions</h3>
+    <p>The current manifest requests only <code>storage</code> plus host access to <code>https://vas.educator.powerschool.com/*</code>. It does not request <code>&lt;all_urls&gt;</code>, cookies, history, webRequest, debugger, nativeMessaging, geolocation, microphone, camera, or identity-provider permissions.</p>
+
+    <h3>9. Deployment-neutral safeguarding</h3>
+    <p>Before rollout, the school should assess shared devices/browser profiles, extension administration, PowerSchool authentication, user notice, support, and incident-handling procedures.</p>
+
+    <h3>10. Screenshots and support material</h3>
+    <p>Store screenshots, training material, bug reports, and support examples should not contain real student or staff personal information. Use sanitized or synthetic demonstration data.</p>
+
+    <h3>11. Change-control safeguard</h3>
+    <p>A new privacy/safeguarding review is required before releasing a version that adds new permissions, broader host access, analytics/telemetry, an external backend, cloud sync, identity integrations, persistent student/guardian data, automatic final Send/Create/Publish behavior, a student-facing workflow, or new categories of personal/sensitive data.</p>
+  </section>
+
+  <section id="vi" class="card" lang="vi">
+    <h2>Tóm tắt safeguarding bằng tiếng Việt</h2>
+    <p>Hub Assistant dành cho giáo viên và nhân viên trường học được ủy quyền. Build hiện tại không lưu lâu dài cơ sở dữ liệu nickname/hồ sơ học sinh, không dùng analytics/ads, không gửi dữ liệu học sinh tới backend A.I MY và không tự động thực hiện hành động cuối cùng như Send, Create Group hoặc Publish.</p>
+    <p>Ngữ cảnh học sinh/người giám hộ chỉ được xử lý cục bộ và tạm thời khi cần cho workflow của giáo viên. Trước rollout, trường cần đánh giá riêng về thiết bị dùng chung, profile trình duyệt, quản trị extension, user notice, support và quy trình safeguarding.</p>
+  </section>
+</main>
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 A.I MY. All rights reserved.</p>
+    <p>Safeguarding/privacy contact: <a href="mailto:thiaimynguyen734@gmail.com">thiaimynguyen734@gmail.com</a></p>
+  </div>
+</footer>
+</body>
+</html>
