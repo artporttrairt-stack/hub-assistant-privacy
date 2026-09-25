@@ -23,7 +23,7 @@
 <main id="content">
   <section class="hero">
     <h1>Child Safeguarding & Student Data Statement</h1>
-    <p class="meta">Publisher: <strong>A.I MY</strong> · Reference release: 8J-R2 LIVE PASS · Date: 20 September 2026 · Contact: <a href="mailto:thiaimynguyen734@gmail.com">thiaimynguyen734@gmail.com</a></p>
+    <p class="meta">Publisher: <strong>A.I MY</strong> · Reference release: <strong>Task 8L Full Release Candidate</strong> · Runtime: 8J-R2 LIVE PASS · Manifest version 1.9.7 · Release documentation date: 20 September 2026 · Website policy review: 25 September 2026 · Contact: <a href="mailto:thiaimynguyen734@gmail.com">thiaimynguyen734@gmail.com</a></p>
   </section>
 
   <div class="notice"><strong>Important:</strong> This statement documents product safeguards. It is not a legal certification and does not replace school policy, safeguarding procedures, data-protection review, or jurisdiction-specific legal advice.</div>
@@ -48,12 +48,14 @@
 
     <h3>5. Identity safety</h3>
     <p>Where recipient matching is used, the design preserves native/original PowerSchool identity evidence and role matching rather than relying on approximate or nickname matching.</p>
+    <p>The retirement of the former nickname feature does not remove the shared identity layer required for recipient, guardian-relation, class-mapping, and Group Chat safety checks.</p>
 
     <h3>6. Legacy data minimization</h3>
     <p>The current release includes install/update cleanup for legacy keys <code>studentNicknames</code>, <code>studentProfiles</code>, and <code>psqmStorageVersion</code>. No new persistent student nickname/profile records are created by the current release.</p>
 
     <h3>7. No credential collection</h3>
     <p>The current release is not designed to collect PowerSchool passwords, browser cookies, session tokens, authentication tokens, payment data, or health data.</p>
+    <p>The audited session-timeout helper does not click <code>Stay Signed In</code>, install a timeout observer/listener, or silently extend a PowerSchool login session.</p>
 
     <h3>8. Minimum permissions</h3>
     <p>The current manifest requests only <code>storage</code> plus host access to <code>https://vas.educator.powerschool.com/*</code>. It does not request <code>&lt;all_urls&gt;</code>, cookies, history, webRequest, debugger, nativeMessaging, geolocation, microphone, camera, or identity-provider permissions.</p>
@@ -70,7 +72,8 @@
 
   <section id="vi" class="card" lang="vi">
     <h2>Tóm tắt safeguarding bằng tiếng Việt</h2>
-    <p>Hub Assistant dành cho giáo viên và nhân viên trường học được ủy quyền. Build hiện tại không lưu lâu dài cơ sở dữ liệu nickname/hồ sơ học sinh, không dùng analytics/ads, không gửi dữ liệu học sinh tới backend A.I MY và không tự động thực hiện hành động cuối cùng như Send, Create Group hoặc Publish.</p>
+    <p>Hub Assistant dành cho giáo viên và nhân viên trường học được ủy quyền. Website policy này được đối chiếu với Task 8L Full Release Candidate (runtime 8J-R2 LIVE PASS, manifest 1.9.7). Build hiện tại không lưu lâu dài cơ sở dữ liệu nickname/hồ sơ học sinh, không dùng analytics/ads, không gửi dữ liệu học sinh tới backend A.I MY và không tự động thực hiện hành động cuối cùng như Send, Create Group hoặc Publish.</p>
+    <p>Helper session-timeout đã audit không bấm <code>Stay Signed In</code> và không âm thầm kéo dài phiên đăng nhập PowerSchool.</p>
     <p>Ngữ cảnh học sinh/người giám hộ chỉ được xử lý cục bộ và tạm thời khi cần cho workflow của giáo viên. Trước rollout, trường cần đánh giá riêng về thiết bị dùng chung, profile trình duyệt, quản trị extension, user notice, support và quy trình safeguarding.</p>
   </section>
 </main>

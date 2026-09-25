@@ -4,6 +4,16 @@ Static privacy/support website for **Hub Assistant**, published by **A.I MY**.
 
 Contact: `thiaimynguyen734@gmail.com`
 
+## Current policy reference
+
+- Release package: **Task 8L Full Release Candidate**
+- Runtime baseline: **8J-R2 LIVE PASS**
+- Manifest version: **1.9.7**
+- Release documentation date: **20 September 2026**
+- Website policy review: **25 September 2026**
+
+The public pages are aligned to the release bundle's Privacy Policy, Child Safeguarding & Student Data Statement, Permissions & Data Map, and Task 8J-R2 security/safeguarding audit. The release runtime is byte-identical to the user-confirmed 8J-R2 LIVE PASS runtime.
+
 This package contains no JavaScript, analytics, advertising, tracking pixels, web forms, or external font/CDN dependency.
 
 ## Recommended repository name
