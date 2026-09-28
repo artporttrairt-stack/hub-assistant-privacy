@@ -23,12 +23,12 @@
 <main id="content">
   <section class="hero">
     <h1>Hub Assistant Privacy Policy</h1>
-    <p class="meta">Publisher / copyright holder: <strong>A.I MY</strong><br>Reference release: <strong>FIX19 Official Live Pass</strong> · Baseline: FIX19_SIS_ROSTER_RECOVERY_LIVENESS_LIVE_PASS · Manifest version 1.9.17<br>Effective date: 20 September 2026 · Current release review: 28 September 2026<br>Privacy contact: <a href="mailto:thiaimynguyen734@gmail.com">thiaimynguyen734@gmail.com</a></p>
+    <p class="meta">Publisher / copyright holder: <strong>A.I MY</strong><br>Reference release: <strong>Hub Assistant 1.9.24 Store Ready (FIX22.4 Live Pass)</strong> · Baseline: FIX22_4_POWERTEACHER_PREREQUISITE_PRISTINE_SAVE_LIVE_PASS · Manifest version 1.9.24<br>Effective date: 20 September 2026 · Current release review: 28 September 2026<br>Privacy contact: <a href="mailto:thiaimynguyen734@gmail.com">thiaimynguyen734@gmail.com</a></p>
     <div class="lang-jump"><a href="#en">English</a><a href="#vi">Tiếng Việt</a></div>
   </section>
 
   <div class="notice">
-    <strong>Scope note:</strong> This policy describes the current data-handling design of Hub Assistant. It is aligned to the FIX19 official release, whose executable payload is byte-identical to the authenticated live-tested FIX19 runtime. It is a product privacy statement, not a legal certification or legal advice. Deployment-specific school policy and jurisdiction-specific requirements must be reviewed separately.
+    <strong>Scope note:</strong> This policy describes the current data-handling design of Hub Assistant. It is aligned to the Hub Assistant 1.9.24 store-ready release derived from the authenticated live-tested FIX22.4 runtime. Store packaging changes do not broaden runtime permissions or the extension's data-handling scope. It is a product privacy statement, not a legal certification or legal advice. Deployment-specific school policy and jurisdiction-specific requirements must be reviewed separately.
   </div>
 
   <section id="en" class="card">
@@ -92,7 +92,7 @@
     <p>Hub Assistant may guide or assist intermediate interface steps, but final consequential actions remain teacher-controlled. The current release does not automatically execute the final Send, Create Group, or Publish action on behalf of the teacher.</p>
 
     <h3>10. Security design</h3>
-    <p>The current manifest uses Manifest V3 and requests only the <code>storage</code> permission. Content scripts are scoped to <code>https://vas.educator.powerschool.com/*</code> and <code>https://vas.powerschool.com/*</code>. The audited FIX19 runtime does not include remote executable code, external analytics, network-fetch logic for an A.I MY service, <code>eval</code>, <code>new Function</code>, <code>XMLHttpRequest</code>, or <code>WebSocket</code>. Its SIS name-display module does use <code>fetch()</code> for the same-origin PowerSchool roster endpoint described above.</p>
+    <p>The current manifest uses Manifest V3 and requests only the <code>storage</code> permission. Content scripts are scoped to <code>https://vas.educator.powerschool.com/*</code> and <code>https://vas.powerschool.com/*</code>. The audited Hub Assistant 1.9.24 / FIX22.4 runtime does not include remote executable code, external analytics, network-fetch logic for an A.I MY service, <code>eval</code>, <code>new Function</code>, <code>XMLHttpRequest</code>, or <code>WebSocket</code>. Its SIS name-display module does use <code>fetch()</code> for the same-origin PowerSchool roster endpoint described above.</p>
     <p>The audited session-timeout helper validates the native timeout dialog but does not click <code>Stay Signed In</code> or silently extend a PowerSchool login session.</p>
 
     <h3>11. Retention and deletion</h3>
@@ -163,7 +163,7 @@
     <p>Hub Assistant có thể hướng dẫn bước trung gian nhưng hành động cuối cùng có hậu quả vẫn do giáo viên kiểm soát. Tiện ích không tự động thực hiện Send, Create Group hoặc Publish thay giáo viên.</p>
 
     <h3>10. Thiết kế bảo mật</h3>
-    <p>Manifest hiện tại dùng Manifest V3 và chỉ yêu cầu quyền <code>storage</code>. Content script được giới hạn ở <code>https://vas.educator.powerschool.com/*</code> và <code>https://vas.powerschool.com/*</code>. Runtime FIX19 đã audit không chứa remote executable code, external analytics, network-fetch logic tới dịch vụ A.I MY, <code>eval</code>, <code>new Function</code>, <code>XMLHttpRequest</code> hoặc <code>WebSocket</code>. Module đổi tên SIS có dùng <code>fetch()</code> tới endpoint roster cùng origin của PowerSchool như mô tả ở trên.</p>
+    <p>Manifest hiện tại dùng Manifest V3 và chỉ yêu cầu quyền <code>storage</code>. Content script được giới hạn ở <code>https://vas.educator.powerschool.com/*</code> và <code>https://vas.powerschool.com/*</code>. Runtime Hub Assistant 1.9.24 / FIX22.4 đã audit không chứa remote executable code, external analytics, network-fetch logic tới dịch vụ A.I MY, <code>eval</code>, <code>new Function</code>, <code>XMLHttpRequest</code> hoặc <code>WebSocket</code>. Module đổi tên SIS có dùng <code>fetch()</code> tới endpoint roster cùng origin của PowerSchool như mô tả ở trên.</p>
     <p>Helper session-timeout đã audit chỉ xác thực dialog timeout native; nó không bấm <code>Stay Signed In</code> và không âm thầm kéo dài phiên đăng nhập PowerSchool.</p>
 
     <h3>11. Lưu giữ và xóa dữ liệu</h3>
