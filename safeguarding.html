@@ -23,7 +23,7 @@
 <main id="content">
   <section class="hero">
     <h1>Child Safeguarding & Student Data Statement</h1>
-    <p class="meta">Publisher: <strong>A.I MY</strong> · Reference release: <strong>Task 8L Full Release Candidate</strong> · Runtime: 8J-R2 LIVE PASS · Manifest version 1.9.7 · Release documentation date: 20 September 2026 · Website policy review: 25 September 2026 · Contact: <a href="mailto:thiaimynguyen734@gmail.com">thiaimynguyen734@gmail.com</a></p>
+    <p class="meta">Publisher: <strong>A.I MY</strong> · Reference release: <strong>FIX19 Official Live Pass</strong> · Manifest version 1.9.17 · Release date: 28 September 2026 · Website policy review: 28 September 2026 · Contact: <a href="mailto:thiaimynguyen734@gmail.com">thiaimynguyen734@gmail.com</a></p>
   </section>
 
   <div class="notice"><strong>Important:</strong> This statement documents product safeguards. It is not a legal certification and does not replace school policy, safeguarding procedures, data-protection review, or jurisdiction-specific legal advice.</div>
@@ -38,7 +38,7 @@
     <p>Hub Assistant should access only the page information required to identify the current teacher workflow and provide relevant guidance. The current release does not maintain a persistent student nickname/profile database.</p>
 
     <h3>2. Local and transient processing</h3>
-    <p>Student/guardian names, roles, relationship context, class context, and related page state may be processed transiently in the browser when needed for a teacher-facing workflow. The current release does not send this information to an A.I MY backend, analytics service, advertising service, Microsoft Graph, Google Identity, or another cloud identity service.</p>
+    <p>Student/guardian names, roles, relationship context, class context, and related page state may be processed transiently in the browser when needed for a teacher-facing workflow. For teacher-enabled SIS Vietnamese-name display, the active section roster may be requested from PowerSchool and processed transiently into a RAM-only display-name map. The current release does not send this information or roster data to an A.I MY backend, analytics service, advertising service, Microsoft Graph, Google Identity, or another cloud identity service.</p>
 
     <h3>3. No student profiling or advertising</h3>
     <p>The current release does not create commercial or behavioral profiles of students, use student information for advertising, display targeted advertising, sell or broker student information, or use student information for unrelated product analytics.</p>
@@ -58,7 +58,7 @@
     <p>The audited session-timeout helper does not click <code>Stay Signed In</code>, install a timeout observer/listener, or silently extend a PowerSchool login session.</p>
 
     <h3>8. Minimum permissions</h3>
-    <p>The current manifest requests only <code>storage</code> plus host access to <code>https://vas.educator.powerschool.com/*</code>. It does not request <code>&lt;all_urls&gt;</code>, cookies, history, webRequest, debugger, nativeMessaging, geolocation, microphone, camera, or identity-provider permissions.</p>
+    <p>The current manifest requests only <code>storage</code>. Content scripts are limited to <code>https://vas.educator.powerschool.com/*</code> and <code>https://vas.powerschool.com/*</code>. It does not request <code>&lt;all_urls&gt;</code>, cookies, history, webRequest, debugger, nativeMessaging, geolocation, microphone, camera, or identity-provider permissions. The SIS name-display roster request stays on the PowerSchool SIS origin.</p>
 
     <h3>9. Deployment-neutral safeguarding</h3>
     <p>Before rollout, the school should assess shared devices/browser profiles, extension administration, PowerSchool authentication, user notice, support, and incident-handling procedures.</p>
@@ -72,7 +72,7 @@
 
   <section id="vi" class="card" lang="vi">
     <h2>Tóm tắt safeguarding bằng tiếng Việt</h2>
-    <p>Hub Assistant dành cho giáo viên và nhân viên trường học được ủy quyền. Website policy này được đối chiếu với Task 8L Full Release Candidate (runtime 8J-R2 LIVE PASS, manifest 1.9.7). Build hiện tại không lưu lâu dài cơ sở dữ liệu nickname/hồ sơ học sinh, không dùng analytics/ads, không gửi dữ liệu học sinh tới backend A.I MY và không tự động thực hiện hành động cuối cùng như Send, Create Group hoặc Publish.</p>
+    <p>Hub Assistant dành cho giáo viên và nhân viên trường học được ủy quyền. Website policy này được đối chiếu với FIX19 Official Live Pass (manifest 1.9.17). Build hiện tại không lưu lâu dài cơ sở dữ liệu nickname/hồ sơ học sinh hoặc roster SIS, không dùng analytics/ads, không gửi dữ liệu học sinh/roster tới backend A.I MY và không tự động thực hiện hành động cuối cùng như Send, Create Group hoặc Publish.</p>
     <p>Helper session-timeout đã audit không bấm <code>Stay Signed In</code> và không âm thầm kéo dài phiên đăng nhập PowerSchool.</p>
     <p>Ngữ cảnh học sinh/người giám hộ chỉ được xử lý cục bộ và tạm thời khi cần cho workflow của giáo viên. Trước rollout, trường cần đánh giá riêng về thiết bị dùng chung, profile trình duyệt, quản trị extension, user notice, support và quy trình safeguarding.</p>
   </section>
