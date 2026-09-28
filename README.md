@@ -6,15 +6,25 @@ Contact: `thiaimynguyen734@gmail.com`
 
 ## Current policy reference
 
-- Release package: **Task 8L Full Release Candidate**
-- Runtime baseline: **8J-R2 LIVE PASS**
-- Manifest version: **1.9.7**
-- Release documentation date: **20 September 2026**
-- Website policy review: **25 September 2026**
+- Official release: **FIX19 SIS Roster Recovery Liveness — LIVE PASS**
+- Baseline ID: **FIX19_SIS_ROSTER_RECOVERY_LIVENESS_LIVE_PASS**
+- Manifest version: **1.9.17**
+- Release date: **28 September 2026**
+- Website policy review: **28 September 2026**
+- Official release ZIP SHA-256: **48b3a37913d83d0978faeaabb468dffb8434ebe49abf9a5f209d5c659b06b7c8**
 
-The public pages are aligned to the release bundle's Privacy Policy, Child Safeguarding & Student Data Statement, Permissions & Data Map, and Task 8J-R2 security/safeguarding audit. The release runtime is byte-identical to the user-confirmed 8J-R2 LIVE PASS runtime.
+The public pages are aligned to the official FIX19 release that was authenticated live-tested on the signed-in PowerSchool tenant. The official release preserves the live-tested executable payload byte-for-byte.
 
-This package contains no JavaScript, analytics, advertising, tracking pixels, web forms, or external font/CDN dependency.
+Current data-handling points reflected by the website:
+
+- PowerHub guidance runs on `https://vas.educator.powerschool.com/*`.
+- PowerSchool SIS / PowerTeacher guidance runs on `https://vas.powerschool.com/*`.
+- After a teacher explicitly opts in to Vietnamese natural-name display, the extension may request the current section roster from PowerSchool's same-origin `/ws/xte/student` endpoint.
+- Student names, PowerSchool IDs, Student Code, roster payloads, and name maps used by the SIS name-display feature remain RAM-only.
+- Only the boolean opt-in `sisVietnameseNameDisplayEnabledV1` is persisted for that feature.
+- No roster or student data is sent to an A.I MY backend or analytics service.
+
+This website package contains no JavaScript, analytics, advertising, tracking pixels, web forms, or external font/CDN dependency.
 
 ## Recommended repository name
 
