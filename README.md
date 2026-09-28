@@ -6,14 +6,14 @@ Contact: `thiaimynguyen734@gmail.com`
 
 ## Current policy reference
 
-- Official release: **FIX19 SIS Roster Recovery Liveness — LIVE PASS**
-- Baseline ID: **FIX19_SIS_ROSTER_RECOVERY_LIVENESS_LIVE_PASS**
-- Manifest version: **1.9.17**
+- Official release: **FIX22.4 PowerTeacher Prerequisite Pristine Save — LIVE PASS**
+- Baseline ID: **FIX22_4_POWERTEACHER_PREREQUISITE_PRISTINE_SAVE_LIVE_PASS**
+- Manifest version: **1.9.24**
 - Release date: **28 September 2026**
 - Website policy review: **28 September 2026**
-- Official release ZIP SHA-256: **48b3a37913d83d0978faeaabb468dffb8434ebe49abf9a5f209d5c659b06b7c8**
+- Store upload ZIP SHA-256 (Chrome Web Store / Microsoft Edge Add-ons payload): **4f2093facce850bf3c4a1d549c2dba7daa199cbec8198027032c53a84036da27**
 
-The public pages are aligned to the official FIX19 release that was authenticated live-tested on the signed-in PowerSchool tenant. The official release preserves the live-tested executable payload byte-for-byte.
+The public pages are aligned to the Hub Assistant 1.9.24 store-ready release derived from the authenticated live-tested FIX22.4 baseline. Store packaging changes do not broaden runtime permissions or the extension's data-handling scope.
 
 Current data-handling points reflected by the website:
 
