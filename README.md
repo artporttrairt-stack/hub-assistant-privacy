@@ -6,23 +6,27 @@ Contact: `thiaimynguyen734@gmail.com`
 
 ## Current policy reference
 
-- Official release: **FIX22.4 PowerTeacher Prerequisite Pristine Save — LIVE PASS**
-- Baseline ID: **FIX22_4_POWERTEACHER_PREREQUISITE_PRISTINE_SAVE_LIVE_PASS**
+- Reference package: **Hub Assistant 1.9.24 — 22 October 2026 final handoff**
+- Source snapshot: **2f0713a7fa926c42bafb9c64cffbb1b180d7bd27**
 - Manifest version: **1.9.24**
-- Release date: **28 September 2026**
-- Website policy review: **28 September 2026**
-- Store upload ZIP SHA-256 (Chrome Web Store / Microsoft Edge Add-ons payload): **4f2093facce850bf3c4a1d549c2dba7daa199cbec8198027032c53a84036da27**
+- Manifest version name (unchanged): **1.9.24 Halloween TEST_ONLY 20261020**
+- Package date / website policy review / policy effective date: **22 October 2026**
+- Reference extension ZIP: **HubAssistant-final-extension.zip**
+- Reference ZIP SHA-256: **5df7f181ecd1614fce7e1cd984586c3407b2456fcc9d7d3b8536a10bdcd446cd**
+- Verification status: **offline verified; owner native account/workflow acceptance pending**
 
-The public pages are aligned to the Hub Assistant 1.9.24 store-ready release derived from the authenticated live-tested FIX22.4 baseline. Store packaging changes do not broaden runtime permissions or the extension's data-handling scope.
+This policy reference replaces the earlier September package reference. It does not assert a new live pass, store upload, store approval, or deployment. The website update does not change the extension package, manifest, permissions, runtime API, or data-handling implementation. The referenced ZIP is not hosted in this public policy repository.
 
 Current data-handling points reflected by the website:
 
 - PowerHub guidance runs on `https://vas.educator.powerschool.com/*`.
 - PowerSchool SIS / PowerTeacher guidance runs on `https://vas.powerschool.com/*`.
 - After a teacher explicitly opts in to Vietnamese natural-name display, the extension may request the current section roster from PowerSchool's same-origin `/ws/xte/student` endpoint.
-- Student names, PowerSchool IDs, Student Code, roster payloads, and name maps used by the SIS name-display feature remain RAM-only.
-- Only the boolean opt-in `sisVietnameseNameDisplayEnabledV1` is persisted for that feature.
+- Student names, PowerSchool IDs, Student Code, roster payloads, and name maps used by the SIS name-display feature remain RAM-only; only its boolean opt-in `sisVietnameseNameDisplayEnabledV1` is persisted.
 - No roster or student data is sent to an A.I MY backend or analytics service.
+- Teacher-role preferences, walkthrough/resume progress, and certificate offer/issuance records remain in the browser profile. These records are not verified per-school-account records and do not contain the certificate name, quiz answers, or score.
+- Quiz details remain in activity-page memory and are cleared before certificate-name entry. The name is used locally to render a PNG; downloaded PNGs retain the name and must be deleted separately.
+- Active walkthroughs can use extension session storage. Grade Entry language changes also use per-tab PowerSchool `sessionStorage` for temporary navigation/guide/display state, including URL context and class/term labels. Handoff validation accepts an age of at most two minutes; this is not a timer that guarantees physical deletion at that age.
 
 This website package contains no JavaScript, analytics, advertising, tracking pixels, web forms, or external font/CDN dependency.
 

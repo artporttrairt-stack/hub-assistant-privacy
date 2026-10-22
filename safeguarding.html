@@ -24,7 +24,7 @@
 <main id="content">
   <section class="hero">
     <h1>Child Safeguarding & Student Data Statement</h1>
-    <p class="meta">Publisher: <strong>A.I MY</strong> · Reference release: <strong>Hub Assistant 1.9.24 Store Ready (FIX22.4 Live Pass)</strong> · Manifest version 1.9.24 · Release date: 28 September 2026 · Website policy review: 28 September 2026 · Contact: <a href="mailto:thiaimynguyen734@gmail.com">thiaimynguyen734@gmail.com</a></p>
+    <p class="meta">Publisher: <strong>A.I MY</strong> · Reference build: <strong>Hub Assistant 1.9.24 — 22 October 2026 build</strong> · Manifest version 1.9.24 · Package date: 22 October 2026 · Website policy review: 22 October 2026 · Contact: <a href="mailto:thiaimynguyen734@gmail.com">thiaimynguyen734@gmail.com</a></p>
   </section>
 
   <div class="notice"><strong>Important:</strong> This statement documents product safeguards. It is not a legal certification and does not replace school policy, safeguarding procedures, data-protection review, or jurisdiction-specific legal advice.</div>
@@ -36,13 +36,13 @@
 
     <h2>Safeguarding principles</h2>
     <h3>1. Data minimization</h3>
-    <p>Hub Assistant should access only the page information required to identify the current teacher workflow and provide relevant guidance. The current release does not maintain a persistent student nickname/profile database.</p>
+    <p>Hub Assistant should access only the page information required to identify the current teacher workflow and provide relevant guidance. The referenced build does not maintain a persistent student nickname/profile database.</p>
 
     <h3>2. Local and transient processing</h3>
-    <p>Student/guardian names, roles, relationship context, class context, and related page state may be processed transiently in the browser when needed for a teacher-facing workflow. For teacher-enabled SIS Vietnamese-name display, the active section roster may be requested from PowerSchool and processed transiently into a RAM-only display-name map. The current release does not send this information or roster data to an A.I MY backend, analytics service, advertising service, Microsoft Graph, Google Identity, or another cloud identity service.</p>
+    <p>Student/guardian names, roles, relationship context, class context, and related page state may be processed transiently in the browser when needed for a teacher-facing workflow. For teacher-enabled SIS Vietnamese-name display, the active section roster may be requested from PowerSchool and processed transiently into a RAM-only display-name map. The referenced build does not send this information or roster data to an A.I MY backend, analytics service, advertising service, Microsoft Graph, Google Identity, or another cloud identity service.</p>
 
     <h3>3. No student profiling or advertising</h3>
-    <p>The current release does not create commercial or behavioral profiles of students, use student information for advertising, display targeted advertising, sell or broker student information, or use student information for unrelated product analytics.</p>
+    <p>The referenced build does not create commercial or behavioral profiles of students, use student information for advertising, display targeted advertising, sell or broker student information, or use student information for unrelated product analytics.</p>
 
     <h3>4. Teacher control</h3>
     <p>The extension may guide intermediate interface actions but does not automatically perform the final consequential action for sending a message, creating a Group Chat, or publishing a Newsfeed post.</p>
@@ -52,10 +52,10 @@
     <p>The retirement of the former nickname feature does not remove the shared identity layer required for recipient, guardian-relation, class-mapping, and Group Chat safety checks.</p>
 
     <h3>6. Legacy data minimization</h3>
-    <p>The current release includes install/update cleanup for legacy keys <code>studentNicknames</code>, <code>studentProfiles</code>, and <code>psqmStorageVersion</code>. No new persistent student nickname/profile records are created by the current release.</p>
+    <p>The referenced build includes install/update cleanup for legacy keys <code>studentNicknames</code>, <code>studentProfiles</code>, and <code>psqmStorageVersion</code>. No new persistent student nickname/profile records are created by the referenced build.</p>
 
     <h3>7. No credential collection</h3>
-    <p>The current release is not designed to collect PowerSchool passwords, browser cookies, session tokens, authentication tokens, payment data, or health data.</p>
+    <p>The referenced build is not designed to collect PowerSchool passwords, browser cookies, session tokens, authentication tokens, payment data, or health data.</p>
     <p>The audited session-timeout helper does not click <code>Stay Signed In</code>, install a timeout observer/listener, or silently extend a PowerSchool login session.</p>
 
     <h3>8. Minimum permissions</h3>
@@ -67,13 +67,17 @@
     <h3>10. Screenshots and support material</h3>
     <p>Store screenshots, training material, bug reports, and support examples should not contain real student or staff personal information. Use sanitized or synthetic demonstration data.</p>
 
+    <h3>10a. Teacher activity and shared profiles</h3>
+    <p>The completion activity uses a teacher-entered name to create a local certificate PNG. Detailed quiz state is cleared before name entry, and the name is not stored in the progress/issuance record. Downloaded images retain the entered name. Role preferences and walkthrough/certificate progress belong to the browser profile, so schools should account for shared-profile reuse. Temporary Grade Entry language-transfer state uses per-tab PowerSchool site storage. See the <a href="privacy.html">Privacy Policy</a> for retention and deletion details.</p>
+
     <h3>11. Change-control safeguard</h3>
     <p>A new privacy/safeguarding review is required before releasing a version that adds new permissions, broader host access, analytics/telemetry, an external backend, cloud sync, identity integrations, persistent student/guardian data, automatic final Send/Create/Publish behavior, a student-facing workflow, or new categories of personal/sensitive data.</p>
   </section>
 
   <section id="vi" class="card" lang="vi">
     <h2>Tóm tắt safeguarding bằng tiếng Việt</h2>
-    <p>Hub Assistant dành cho giáo viên và nhân viên trường học được ủy quyền. Website policy này được đối chiếu với Hub Assistant 1.9.24 store-ready, dựa trên FIX22.4 Live Pass đã được live-test. Build hiện tại không lưu lâu dài cơ sở dữ liệu nickname/hồ sơ học sinh hoặc roster SIS, không dùng analytics/ads, không gửi dữ liệu học sinh/roster tới backend A.I MY và không tự động thực hiện hành động cuối cùng như Send, Create Group hoặc Publish.</p>
+    <p>Hub Assistant dành cho giáo viên và nhân viên trường học được ủy quyền. Website policy này được đối chiếu với gói Hub Assistant 1.9.24 ngày 22/10/2026; nghiệm thu trên tài khoản và workflow thật vẫn đang chờ sau kiểm thử offline. Build hiện tại không lưu lâu dài cơ sở dữ liệu nickname/hồ sơ học sinh hoặc roster SIS, không dùng analytics/ads, không gửi dữ liệu học sinh/roster tới backend A.I MY và không tự động thực hiện hành động cuối cùng như Send, Create Group hoặc Publish.</p>
+    <p>Hoạt động cấp chứng nhận chỉ dùng tên giáo viên nhập để tạo PNG cục bộ. Chi tiết bài ôn tập được dọn trước khi nhập tên; tên không nằm trong bản ghi tiến độ/cấp chứng nhận. Ảnh đã tải vẫn chứa tên. Tùy chọn vai trò và tiến độ thuộc profile trình duyệt nên cần lưu ý khi dùng chung profile. Dữ liệu chuyển ngôn ngữ Grade Entry nằm tạm trong storage theo tab của trang PowerSchool. Xem <a href="privacy.html#vi">policy</a> về lưu giữ và xóa dữ liệu.</p>
     <p>Helper session-timeout đã audit không bấm <code>Stay Signed In</code> và không âm thầm kéo dài phiên đăng nhập PowerSchool.</p>
     <p>Ngữ cảnh học sinh/người giám hộ chỉ được xử lý cục bộ và tạm thời khi cần cho workflow của giáo viên. Trước rollout, trường cần đánh giá riêng về thiết bị dùng chung, profile trình duyệt, quản trị extension, user notice, support và quy trình safeguarding.</p>
   </section>
