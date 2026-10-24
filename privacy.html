@@ -24,187 +24,89 @@
 <main id="content">
   <section class="hero">
     <h1>Hub Assistant Privacy Policy</h1>
-    <p class="meta">Publisher / copyright holder: <strong>A.I MY</strong><br>Reference build: <strong>Hub Assistant 1.9.24 — 22 October 2026 build</strong> · Manifest version 1.9.24<br>Effective date: 22 October 2026 · Policy review: 22 October 2026<br>Privacy contact: <a href="mailto:thiaimynguyen734@gmail.com">thiaimynguyen734@gmail.com</a></p>
+    <p class="meta">Publisher: A.I MY · Policy review: 24 October 2026</p>
+    <p>This revision covers the 24 October development snapshot and identifies changes from the earlier package. The source manifest still says 1.9.24 TEST_ONLY. This is not a claim that these changes are uploaded to either Store.</p>
+    <p lang="vi">Bản này đối chiếu mã phát triển ngày 24/10/2026. Mã vẫn ghi 1.9.24 TEST_ONLY; chưa xác nhận cập nhật kho tiện ích.</p>
+    <p><a href="privacy-20261022.html">Earlier package policy / Chính sách gói ngày 22/10</a></p>
     <div class="lang-jump"><a href="#en">English</a><a href="#vi">Tiếng Việt</a></div>
   </section>
-
-  <div class="notice">
-    <strong>Scope note:</strong> This policy describes the data-handling design of the Hub Assistant 1.9.24 package reviewed on 22 October 2026. That package has offline verification; native account and school-workflow acceptance remains pending. This policy review does not certify deployment or store approval. It is a product privacy statement, not a legal certification or legal advice. Deployment-specific school policy and jurisdiction-specific requirements must be reviewed separately.
-  </div>
-
-  <section id="en" class="card">
+  <section id="en" class="card" lang="en">
     <h2>English</h2>
-
-    <h3>1. What Hub Assistant is</h3>
-    <p>Hub Assistant is a teacher-facing browser extension that provides contextual guidance on supported PowerSchool / PowerHub educator pages. It helps teachers understand interface context and complete workflows while keeping final actions under teacher control.</p>
-    <p>Hub Assistant is independently developed by A.I MY. It is not an official PowerSchool, Microsoft, or Google product and does not claim endorsement by those companies.</p>
-    <p>The referenced build is limited to two supported VAS PowerSchool origins: <code>https://vas.educator.powerschool.com/*</code> for PowerHub educator workflows and <code>https://vas.powerschool.com/*</code> for PowerSchool SIS / PowerTeacher workflows.</p>
-
-    <h3>2. Intended users</h3>
-    <p>Hub Assistant is designed for teachers and authorized school staff. It is not designed as a student-facing service, social network, advertising service, or student profiling system.</p>
-    <p>If a future deployment changes the intended audience or makes the extension directly available to children, the privacy and safeguarding design must be reassessed before that deployment.</p>
-
-    <h3>3. Information the extension may access locally</h3>
-    <p>To provide teacher-facing guidance, the extension may read information already visible in the supported PowerSchool / PowerHub page when relevant, including:</p>
+    <h3>1. Purpose and scope</h3>
+    <p>Hub Assistant helps teachers use supported VAS PowerSchool and PowerHub pages with contextual guidance, display assistance and local work reminders. A.I MY develops it independently. It is not an official PowerSchool, Google or Microsoft product.</p>
+    <p>It is for teachers and authorized school staff, not a service directed to children. School access permissions still apply.</p>
+    <h3>2. Information used locally</h3>
+    <p>The extension processes relevant supported-page information in the browser: displayed student, guardian and staff names; roles and relationships; class and reporting-term labels; page URLs; buttons, dialogs and workflow state. Messages and Newsfeed content can be processed when needed to identify the current guidance step or recipient. This is access to website content even when it is not sent to A.I MY.</p>
+    <p>Language, display mode, selected teacher role, walkthrough progress and completion records are used to personalize guidance. Teacher-entered deadline titles, dates, optional times and publication dates are used for local reminders.</p>
+    <p>Grade Entry guidance observes interface state and teacher actions. The automatic Filter/Summary feature reads page, class and term context in memory and opens those display panels once per context. It does not read grade values, select a student or column, use Fill, or press Save. The passive before-Save checklist observes editing events without reading or storing entered scores.</p>
+    <h3>3. Name display and requests to PowerSchool</h3>
+    <p>The 24 October development build defaults to automatic name display. A teacher can select the original PowerSchool name display in the extension settings. The earlier 22 October policy described a separate opt-in mode; that description must not be applied to the current automatic mode.</p>
+    <p>When name assistance is active, the extension may request the current section roster from PowerSchool at <code>/ws/xte/student</code>. On supported SIS administrator pages, it may also read student demographic pages and student/contact relationship endpoints under <code>/admin/students/generaldemographics.html</code> and <code>/ws/contacts/</code>, subject to the signed-in account and verified page permissions. Responses may include information beyond the name fields; they are processed transiently to identify the relevant names and relationships.</p>
+    <p>These HTTPS requests use the existing PowerSchool session and go to PowerSchool on the same site, not to an A.I MY server. Names, identifiers, roster responses and name maps used for display remain in memory rather than an extension student database. Selecting original names stops name-assistance requests; it does not disable other guidance.</p>
+    <h3>4. Local storage and retention</h3>
+    <p>Browser-profile storage holds language and display preferences, optional-support settings, teacher role and update time, walkthrough/resume progress, certificate completion/issuance flags and identifiers, animation opt-out preferences, and deadline entries and reminder-delivery state. These records may be reused if people share one browser profile. They are not verified school-account records.</p>
+    <p>Deadline data is stored locally under <code>hubDeadlinesV1</code>. It includes titles, dates, optional times/publication dates and reminder state. Delete entries in the deadline panel. Avoid putting student names or other sensitive information in reminder titles: desktop notifications can show the title on screen.</p>
+    <p>Some active guidance uses extension session storage. Grade Entry language switching also uses per-tab PowerSchool <code>sessionStorage</code> for temporary URL, class/term and guide/display state. The handoff accepts entries at most two minutes old and removes them when consumed or invalid; this is not a timed deletion guarantee.</p>
+    <p>In-memory page information lasts while needed for the active workflow. Local preferences and progress can remain until cleared through browser/extension controls or removal, subject to browser and school policy. Page-origin site storage must be cleared separately. Removing the extension does not delete downloaded files. Legacy nickname/profile keys are targeted for cleanup; the extension does not create a persistent student nickname or roster database.</p>
+    <h3>5. Certificate activity</h3>
+    <p>Quiz answers, self-assessment responses and calculated results stay in activity-page memory and are cleared before certificate-name entry. The entered name is used locally to render a PNG, not written to the progress record or sent to A.I MY. A downloaded PNG contains the name and remains until the person or school deletes it.</p>
+    <h3>6. Permissions and reminders</h3>
     <ul>
-      <li>names displayed by PowerSchool;</li>
-      <li>student, guardian, or account role labels;</li>
-      <li>class, audience, and relationship context used to identify the correct teacher workflow;</li>
-      <li>interface state, buttons, dialogs, tabs, and navigation context;</li>
-      <li>information displayed within Messages or Newsfeed surfaces when needed to determine the current guidance state;</li>
-      <li>assistant-language and display preferences;</li>
-      <li>walkthrough, onboarding, and contextual-help progress;</li>
-      <li>a teacher-selected role preference; and</li>
-      <li>a teacher-entered display name and quiz responses when the teacher chooses to use the completion-certificate activity.</li>
+      <li><code>storage</code>: stores the preferences, progress and deadline data described above.</li>
+      <li><code>alarms</code>: checks local deadlines on a browser schedule.</li>
+      <li><code>offscreen</code>: plays the bundled reminder chime when sound is enabled. It does not record audio or use a microphone.</li>
+      <li>Optional <code>notifications</code>: requested when a teacher enables desktop reminders. Titles and due-date information can appear in operating-system notifications.</li>
     </ul>
-    <p>For the teacher-enabled SIS Vietnamese natural-name display, the extension may request the active section roster from PowerSchool's same-origin <code>/ws/xte/student</code> endpoint using the existing signed-in PowerSchool session. The response is processed transiently to build a display-name map.</p>
-    <p>This access is limited to the two supported PowerSchool origins declared by the current manifest/content-script configuration. The SIS roster request is sent to PowerSchool, not to A.I MY.</p>
-
-    <h3>4. Information the extension does not intentionally collect</h3>
-    <p>The referenced build does not intentionally collect or create a database of passwords, authentication cookies or tokens, payment information, health information, precise location, unrelated browsing history, advertising identifiers, student behavioral profiles, persistent student nicknames, or persistent student-profile records.</p>
-    <p>Hub Assistant does not use A.I MY analytics, telemetry, advertising trackers, or behavioral advertising in the referenced build.</p>
-
-    <h3>5. How personal information is processed</h3>
-    <p>Names and other PowerSchool identity context may be processed transiently in the browser while a supported page is active so the extension can provide the requested teacher-facing guidance.</p>
-    <p>The referenced build uses in-memory page/runtime structures for transient student/guardian identity context. For SIS Vietnamese-name display, the current-section roster payload is processed transiently and reduced to a RAM-only name map; student names, PowerSchool IDs, Student Code, roster payloads, and name maps are not persisted by that feature.</p>
-    <p>The extension does not send student names, guardian names, message content, Newsfeed content, SIS roster data, or teacher workflow data to a server controlled by A.I MY or to an analytics provider.</p>
-    <p>When SIS Vietnamese-name display is enabled, Hub Assistant itself initiates a same-origin roster request to PowerSchool. That request uses the existing signed-in PowerSchool session and stays within the PowerSchool service; it is not an A.I MY data transmission.</p>
-
-    <h3>5a. Completion activity and certificate image</h3>
-    <p>Quiz answers, confidence ratings, self-assessment responses, and the calculated score are held in the activity page's memory. Detailed quiz state is cleared before the certificate-name form is shown. The teacher-entered name is used locally to render the certificate PNG; it is not written to extension storage or sent to an external service by this feature.</p>
-    <p>The name field and temporary image references are cleared when the activity finishes or the teacher leaves the certificate page. A PNG that the teacher chooses to download still contains the entered name and remains in the chosen download location until deleted. Clearing extension state or removing the extension does not delete downloaded files.</p>
-
-    <h3>6. Information stored by the extension</h3>
-    <p>The extension uses the browser extension <code>storage</code> capability for product settings and progress, including:</p>
-    <ul>
-      <li>assistant language/reference choices;</li>
-      <li>walkthrough and onboarding progress;</li>
-      <li>contextual-help preferences;</li>
-      <li>the selected teacher role, selection source, and update time;</li>
-      <li>walkthrough completion and resume state, certificate offer/issued flags, and technical progress/issuance identifiers;</li>
-      <li>SIS Vietnamese-name display opt-in (a boolean preference only); and</li>
-      <li>other extension state required to continue the teacher-facing experience.</li>
-    </ul>
-    <p>These settings are not intended to store student or guardian profiles. For SIS Vietnamese-name display, only <code>sisVietnameseNameDisplayEnabledV1=true</code> is persisted after teacher opt-in; student names, PowerSchool IDs, Student Code, roster payloads, and name maps remain RAM-only.</p>
-    <p>Earlier development versions used legacy student nickname/profile and SIS name-prototype storage keys. The referenced build removes obsolete nickname/profile keys such as <code>studentNicknames</code>, <code>studentProfiles</code>, and <code>psqmStorageVersion</code>, and purges obsolete SIS prototype name-display state.</p>
-
-    <p>The teacher-role preference and certificate progress/issuance records are stored locally in the browser profile. These records do not include the certificate name, quiz answers, or score. They are browser-profile state rather than verified per-school-account records; schools using shared profiles should account for reuse of this state.</p>
-    <p>Some active walkthrough state is held in browser extension session storage. To resume Grade Entry guidance after a language change, the extension also uses the PowerSchool page's per-tab <code>sessionStorage</code> for temporary navigation, guide, and display state, including URL context and class/reporting-term labels. This handoff is accepted only when no more than two minutes old and is removed when consumed or found invalid. The age check is not a guarantee that stored bytes are deleted exactly two minutes after creation. This is page-origin session storage, separate from browser extension storage.</p>
-
-    <h3>7. Sharing and external transmission</h3>
-    <p>The referenced build does not sell or broker personal information; share student or guardian information with advertisers; transmit student, guardian, message, Newsfeed, or SIS roster data to an A.I MY backend; use third-party analytics or telemetry services; use Microsoft Graph, Google Identity, or another cloud identity service; or synchronize a student nickname/profile database to the cloud.</p>
-    <p>The SIS roster request described above goes only to PowerSchool. The help interface may also offer a user-initiated link to Microsoft 365 Copilot; Hub Assistant does not append or prefill PowerSchool, student, guardian, message, or roster content into that link.</p>
-    <p>If a future version introduces any external service or materially different data use, this policy and the browser-store disclosures must be updated before that version is released.</p>
-
-    <h3>8. Child safeguarding and educational use</h3>
-    <p>Hub Assistant follows a data-minimization approach. Student/guardian identity context is used only when necessary for a teacher-facing workflow. The referenced build does not build commercial or behavioral profiles of children, does not display advertising, and does not automatically perform final teacher actions such as Send, Create Group, or Publish.</p>
-    <p>PowerSchool / PowerHub remains the authoritative source of school data and workflow state.</p>
-
-    <h3>9. Teacher control</h3>
-    <p>Hub Assistant may guide or assist intermediate interface steps, but final consequential actions remain teacher-controlled. The referenced build does not automatically execute the final Send, Create Group, or Publish action on behalf of the teacher.</p>
-
-    <h3>10. Security design</h3>
-    <p>The current manifest uses Manifest V3 and requests only the <code>storage</code> permission. Content scripts are scoped to <code>https://vas.educator.powerschool.com/*</code> and <code>https://vas.powerschool.com/*</code>. The referenced Hub Assistant 1.9.24 runtime does not include remote executable code, external analytics, network-fetch logic for an A.I MY service, <code>eval</code>, <code>new Function</code>, <code>XMLHttpRequest</code>, or <code>WebSocket</code>. Its SIS name-display module does use <code>fetch()</code> for the same-origin PowerSchool roster endpoint described above.</p>
-    <p>The audited session-timeout helper validates the native timeout dialog but does not click <code>Stay Signed In</code> or silently extend a PowerSchool login session.</p>
-
-    <h3>11. Retention and deletion</h3>
-    <p>Hub Assistant does not intentionally persist student nickname/profile or SIS roster records in the referenced build. Transient page/runtime identity context, roster responses, and SIS name maps last only as needed for the active browser/page workflow. The SIS name-display opt-in and other extension preferences/progress may remain in browser extension storage until cleared through browser/extension administration or the extension is removed, subject to browser behavior and school device-management policy.</p>
-    <p>Role preferences and certificate completion/issuance records can remain until extension storage is cleared or the extension is removed, subject to browser behavior and school device policy. Page-origin session storage is managed separately by the browser and the supported site; it can be cleared through site-data controls. Downloaded certificate PNG files must be managed separately by the person or school that downloaded them.</p>
-    <p>Legacy nickname/profile keys are targeted for removal during install/update as described above.</p>
-
-    <h3>12. GitHub Pages website hosting</h3>
-    <p>This privacy/support website contains no A.I MY analytics, advertising, tracking scripts, data-entry forms, or external JavaScript. It is hosted using GitHub Pages. GitHub states that visitor IP addresses are logged and stored for security purposes when GitHub Pages sites are visited. That hosting-provider processing is separate from the Hub Assistant browser extension.</p>
-    <p>See GitHub's own privacy documentation for GitHub-hosted infrastructure practices.</p>
-
-    <h3>13. School deployment and account model</h3>
-    <p>This policy does not assume a particular Edge profile, Chrome profile, managed-browser configuration, or device-sharing model. Schools should separately determine appropriate account, device-sharing, access-control, retention, user-notice, and incident-handling practices.</p>
-
-    <h3>14. Policy changes</h3>
-    <p>This policy should be reviewed whenever the extension adds a new permission, broader host access, external service, analytics capability, identity provider, persistent student-data feature, student-facing workflow, or materially different teacher workflow.</p>
-
-    <h3>15. Contact</h3>
-    <address>Privacy and support questions: <a href="mailto:thiaimynguyen734@gmail.com">thiaimynguyen734@gmail.com</a></address>
+    <p>Content scripts are limited to <code>https://vas.educator.powerschool.com/*</code> and <code>https://vas.powerschool.com/*</code>. The manifest also declares PowerHub host access. These permissions support guidance and display assistance on those sites, not unrelated browsing. No new host access is needed to open Filter or Summary.</p>
+    <h3>7. Sharing, security and limited use</h3>
+    <p>The reviewed source does not send school content, names, roster data or local reminders to A.I MY, an analytics provider or an advertising service. It does not sell user data, use it for advertising or credit decisions, or use remote executable code. Data is used only for the disclosed teacher-assistance purpose. Hub Assistant's use of user data adheres to the Chrome Web Store User Data Policy, including the Limited Use requirements.</p>
+    <p>The extension does not extract passwords, authentication cookies or tokens. PowerSchool requests rely on the existing authorized session. It does not silently extend the PowerSchool login session. School policy must address shared devices, account permissions and local browser data.</p>
+    <p>A teacher can open an optional Microsoft 365 Copilot link. Hub Assistant does not prefill or attach school content to it. The external site's own privacy terms apply after it is opened. Browser and operating-system services manage optional notifications; notifications may be visible to others near the device.</p>
+    <h3>8. Teacher control and changes</h3>
+    <p>The extension can assist intermediate display steps, including opening Filter and Summary. Teachers retain control of grade entry, Fill, Save, sending messages, creating groups and publishing posts. A teacher may close Filter or Summary again in the same class/term.</p>
+    <p>This policy and Store disclosures must be reviewed before a release changes permissions or data practices. Required notice and informed consent must be provided before the changed processing starts; publishing this page alone is not a substitute. This review does not certify Store approval or school deployment.</p>
+    <h3>9. Website hosting and contact</h3>
+    <p>This static policy website uses GitHub Pages without A.I MY analytics, advertising, scripts or forms. GitHub may log visitor IP addresses for security under its own privacy terms. That hosting processing is separate from the extension.</p>
+    <p>For privacy, access, deletion or support questions: <a href="mailto:thiaimynguyen734@gmail.com">thiaimynguyen734@gmail.com</a>.</p>
   </section>
-
   <section id="vi" class="card" lang="vi">
-    <h2>Chính sách quyền riêng tư</h2>
-    <p>Policy này mô tả gói Hub Assistant 1.9.24 được đối chiếu ngày 22/10/2026. Gói đã được kiểm thử offline; nghiệm thu trên tài khoản và workflow thật của trường vẫn đang chờ. Việc cập nhật policy không xác nhận triển khai hoặc phê duyệt của kho tiện ích.</p>
-
-    <h3>1. Hub Assistant là gì</h3>
-    <p>Hub Assistant là tiện ích trình duyệt dành cho giáo viên, cung cấp hướng dẫn theo ngữ cảnh trên các trang PowerSchool / PowerHub dành cho giáo viên được hỗ trợ. Các hành động cuối cùng vẫn do giáo viên kiểm soát.</p>
-    <p>Hub Assistant được A.I MY phát triển độc lập. Đây không phải sản phẩm chính thức của PowerSchool, Microsoft hoặc Google và không tuyên bố được các công ty này bảo trợ hay chứng nhận.</p>
-    <p>Build hiện tại chỉ hoạt động trên hai origin VAS PowerSchool được hỗ trợ: <code>https://vas.educator.powerschool.com/*</code> cho PowerHub và <code>https://vas.powerschool.com/*</code> cho PowerSchool SIS / PowerTeacher.</p>
-
-    <h3>2. Đối tượng sử dụng</h3>
-    <p>Hub Assistant được thiết kế cho giáo viên và nhân viên trường học được ủy quyền. Tiện ích không được thiết kế như dịch vụ dành trực tiếp cho học sinh, mạng xã hội, dịch vụ quảng cáo hay hệ thống lập hồ sơ học sinh.</p>
-    <p>Nếu cách triển khai trong tương lai thay đổi đối tượng và cho trẻ em sử dụng trực tiếp, thiết kế quyền riêng tư và safeguarding phải được đánh giá lại trước khi triển khai.</p>
-
-    <h3>3. Thông tin tiện ích có thể đọc cục bộ</h3>
-    <p>Để cung cấp hướng dẫn cho giáo viên, tiện ích có thể đọc thông tin đang hiển thị trên trang PowerSchool / PowerHub được hỗ trợ khi cần, gồm tên do PowerSchool hiển thị, vai trò tài khoản, ngữ cảnh lớp/audience/quan hệ, trạng thái giao diện, nội dung đang hiển thị trong Messages hoặc Newsfeed khi cần xác định bước hướng dẫn, các lựa chọn/ngữ cảnh tiến độ của chính extension, vai trò giáo viên chủ động chọn, và tên/đáp án giáo viên chủ động nhập khi dùng hoạt động cấp chứng nhận.</p>
-    <p>Đối với chức năng đổi tên tự nhiên tiếng Việt trong SIS do giáo viên chủ động bật, extension có thể gọi roster của section hiện tại từ endpoint cùng origin của PowerSchool <code>/ws/xte/student</code> bằng phiên PowerSchool đang đăng nhập. Response chỉ được xử lý tạm thời để tạo name map hiển thị.</p>
-    <p>Quyền truy cập này chỉ giới hạn ở hai origin PowerSchool được hỗ trợ. Roster SIS được gửi/nhận với PowerSchool, không gửi tới A.I MY.</p>
-
-    <h3>4. Thông tin tiện ích không chủ động thu thập</h3>
-    <p>Build hiện tại không chủ động tạo cơ sở dữ liệu về mật khẩu, cookie/token xác thực, dữ liệu tài chính, dữ liệu sức khỏe, vị trí chính xác, lịch sử duyệt web không liên quan, advertising identifier, hồ sơ hành vi học sinh, nickname học sinh lưu lâu dài hoặc hồ sơ học sinh lưu lâu dài.</p>
-    <p>Build hiện tại không sử dụng analytics, telemetry, quảng cáo theo dõi hoặc quảng cáo hành vi của A.I MY.</p>
-
-    <h3>5. Cách xử lý dữ liệu cá nhân</h3>
-    <p>Tên và ngữ cảnh định danh từ PowerSchool có thể được xử lý tạm thời trong trình duyệt khi trang được hỗ trợ đang hoạt động để cung cấp hướng dẫn cho giáo viên. Với chức năng đổi tên SIS, roster của section hiện tại chỉ được xử lý tạm thời để tạo name map trong RAM; tên học sinh, PowerSchool ID, Student Code, roster payload và name map không được lưu lâu dài bởi chức năng này.</p>
-    <p>Build hiện tại không gửi tên học sinh, tên người giám hộ, nội dung tin nhắn, nội dung Newsfeed, roster SIS hoặc dữ liệu workflow của giáo viên tới máy chủ do A.I MY kiểm soát hoặc nhà cung cấp analytics. Request roster do extension khởi tạo chỉ đi tới PowerSchool cùng origin.</p>
-
-    <h3>5a. Bài ôn tập và ảnh chứng nhận</h3>
-    <p>Đáp án, mức độ chắc chắn, câu trả lời tự đánh giá và điểm tính được chỉ nằm trong bộ nhớ của trang ôn tập. Chi tiết phiên làm bài được dọn trước khi hiển thị form nhập tên trên chứng nhận. Tên giáo viên nhập chỉ dùng cục bộ để tạo ảnh PNG; chức năng này không ghi tên vào extension storage hoặc gửi tên tới dịch vụ bên ngoài.</p>
-    <p>Ô tên và tham chiếu ảnh tạm được dọn khi hoàn tất hoặc rời trang chứng nhận. Ảnh PNG do giáo viên chủ động tải vẫn chứa tên đã nhập và còn trong nơi lưu tệp cho tới khi được xóa. Xóa dữ liệu extension hoặc gỡ extension không xóa tệp đã tải.</p>
-
-    <h3>6. Dữ liệu extension lưu</h3>
-    <p>Extension sử dụng khả năng <code>storage</code> của trình duyệt để lưu cài đặt và tiến độ sản phẩm, ví dụ:</p>
+    <h2>Tiếng Việt</h2>
+    <h3>1. Mục đích và phạm vi</h3>
+    <p>Hub Assistant hỗ trợ giáo viên dùng các trang VAS PowerSchool và PowerHub qua hướng dẫn, hỗ trợ hiển thị và nhắc việc cục bộ. A.I MY phát triển độc lập. Đây không phải sản phẩm chính thức của PowerSchool, Google hay Microsoft.</p>
+    <p>Tiện ích dành cho giáo viên và nhân viên trường được phép truy cập, không phải dịch vụ dành cho trẻ em. Quyền tài khoản của trường vẫn áp dụng.</p>
+    <h3>2. Thông tin xử lý trong trình duyệt</h3>
+    <p>Tiện ích có thể đọc thông tin cần thiết trên trang được hỗ trợ: tên học sinh, người giám hộ và nhân viên; vai trò, quan hệ; lớp, kỳ báo cáo; địa chỉ trang; nút, hộp thoại và trạng thái thao tác. Nội dung Messages và Newsfeed có thể được xử lý để xác định bước hướng dẫn hoặc người nhận. Đây vẫn là truy cập nội dung website, dù không gửi tới A.I MY.</p>
+    <p>Ngôn ngữ, chế độ tên, vai trò giáo viên, tiến độ hướng dẫn và trạng thái hoàn tất giúp điều chỉnh trợ giúp. Tên việc, hạn, giờ và ngày công bố do giáo viên nhập được dùng để nhắc việc trên thiết bị.</p>
+    <p>Hướng dẫn nhập điểm theo dõi trạng thái giao diện và thao tác của giáo viên. Tính năng tự mở Filter/Summary đọc trang, lớp và kỳ tạm thời để mở hai bảng một lần cho mỗi ngữ cảnh. Tính năng này không đọc giá trị điểm, chọn học sinh/cột, dùng Fill hay bấm Save. Checklist trước Save chỉ nhận biết sự kiện chỉnh sửa, không đọc hoặc lưu điểm đã nhập.</p>
+    <h3>3. Hiển thị tên và kết nối PowerSchool</h3>
+    <p>Bản phát triển ngày 24/10 mặc định dùng chế độ hiển thị tên tự động. Giáo viên có thể chọn giữ tên gốc PowerSchool trong cài đặt tiện ích. Chính sách ngày 22/10 mô tả chế độ chỉ chạy sau khi chủ động bật; mô tả đó không áp dụng cho chế độ tự động hiện tại.</p>
+    <p>Khi hỗ trợ tên đang bật, tiện ích có thể lấy danh sách lớp từ <code>/ws/xte/student</code> của PowerSchool. Ở các trang quản trị SIS được hỗ trợ, tiện ích còn có thể đọc trang thông tin học sinh và quan hệ người liên hệ tại <code>/admin/students/generaldemographics.html</code> và <code>/ws/contacts/</code>. Việc đọc phụ thuộc quyền tài khoản và trang đã xác định được. Phản hồi có thể chứa thông tin ngoài tên; dữ liệu được xử lý tạm để xác định tên và quan hệ cần thiết.</p>
+    <p>Các yêu cầu HTTPS dùng phiên PowerSchool đang đăng nhập và chỉ gửi tới cùng website PowerSchool. Tên, mã định danh, danh sách lớp và bảng đối chiếu tên nằm trong bộ nhớ, không tạo cơ sở dữ liệu học sinh của tiện ích. Chọn tên gốc sẽ dừng yêu cầu hỗ trợ tên; các hướng dẫn khác vẫn hoạt động.</p>
+    <h3>4. Lưu trữ và thời gian lưu</h3>
+    <p>Hồ sơ trình duyệt lưu ngôn ngữ, chế độ tên, tùy chọn trợ giúp, vai trò giáo viên và thời điểm cập nhật. Nó cũng lưu tiến độ hướng dẫn, cờ/mã hoàn tất và cấp chứng nhận, tùy chọn tắt minh họa, lịch nhắc hạn và trạng thái đã nhắc. Người dùng chung hồ sơ trình duyệt có thể dùng lại các trạng thái này. Đây không phải hồ sơ riêng đã xác thực cho từng tài khoản trường.</p>
+    <p>Lịch nhắc lưu cục bộ tại <code>hubDeadlinesV1</code>, gồm tên việc, hạn, giờ/ngày công bố nếu có và trạng thái nhắc. Xóa từng việc trong bảng nhắc hạn. Tránh nhập tên học sinh hoặc thông tin nhạy cảm vào tên việc vì thông báo máy tính có thể hiện nội dung đó.</p>
+    <p>Một số hướng dẫn đang chạy dùng bộ nhớ phiên của tiện ích. Khi đổi ngôn ngữ Grade Entry, <code>sessionStorage</code> theo tab PowerSchool giữ tạm địa chỉ trang, lớp/kỳ và trạng thái hướng dẫn/hiển thị. Dữ liệu chuyển tiếp chỉ được chấp nhận khi không quá hai phút tuổi và được xóa khi dùng xong hoặc không hợp lệ. Đây không phải cam kết xóa đúng sau hai phút.</p>
+    <p>Dữ liệu trong bộ nhớ được giữ khi còn cần cho thao tác hiện tại. Tùy chọn và tiến độ có thể còn đến khi xóa dữ liệu tiện ích hoặc gỡ tiện ích, tùy trình duyệt và quy định trường. Dữ liệu website phải xóa riêng. Gỡ tiện ích không xóa tệp đã tải. Tiện ích dọn các khóa nickname/hồ sơ cũ và không tạo cơ sở dữ liệu tên phụ hoặc danh sách học sinh lâu dài.</p>
+    <h3>5. Bài ôn tập và chứng nhận</h3>
+    <p>Đáp án, tự đánh giá và kết quả tính được chỉ nằm trong bộ nhớ trang ôn tập, được dọn trước bước nhập tên chứng nhận. Tên chỉ dùng để tạo ảnh PNG cục bộ, không ghi vào tiến độ hoặc gửi tới A.I MY. Ảnh tải xuống vẫn chứa tên cho tới khi người dùng hoặc trường xóa tệp.</p>
+    <h3>6. Quyền trình duyệt và nhắc hạn</h3>
     <ul>
-      <li>lựa chọn ngôn ngữ/ngôn ngữ tham chiếu của trợ lý;</li>
-      <li>tiến độ walkthrough và onboarding;</li>
-      <li>tùy chọn contextual help;</li>
-      <li>vai trò giáo viên đã chọn, nguồn lựa chọn và thời điểm cập nhật;</li>
-      <li>trạng thái hoàn tất/tiếp tục walkthrough, cờ đã mời/đã cấp chứng nhận và mã kỹ thuật phục vụ tiến độ/xác nhận cấp;</li>
-      <li>opt-in đổi tên tự nhiên tiếng Việt trong SIS (chỉ là một boolean); và</li>
-      <li>trạng thái extension cần thiết để tiếp tục trải nghiệm hướng dẫn.</li>
+      <li><code>storage</code>: lưu tùy chọn, tiến độ và lịch nhắc như mô tả trên.</li>
+      <li><code>alarms</code>: kiểm tra hạn cục bộ theo lịch của trình duyệt.</li>
+      <li><code>offscreen</code>: phát âm báo có sẵn khi bật âm thanh. Không thu âm hoặc dùng micro.</li>
+      <li>Quyền tùy chọn <code>notifications</code>: được yêu cầu khi giáo viên bật thông báo máy tính. Tên việc và hạn có thể hiện trong thông báo hệ điều hành.</li>
     </ul>
-    <p>Các setting này không nhằm lưu hồ sơ học sinh hoặc người giám hộ. Với chức năng đổi tên SIS, chỉ <code>sisVietnameseNameDisplayEnabledV1=true</code> được persist sau khi giáo viên opt-in; tên, ID, Student Code, roster payload và name map vẫn chỉ ở RAM.</p>
-    <p>Để dọn dữ liệu từ phiên bản cũ, build hiện tại xóa các key nickname/profile cũ như <code>studentNicknames</code>, <code>studentProfiles</code>, <code>psqmStorageVersion</code> và purge state prototype đổi tên SIS đã lỗi thời.</p>
-
-    <p>Tùy chọn vai trò và bản ghi tiến độ/cấp chứng nhận được lưu cục bộ trong profile trình duyệt. Các bản ghi này không chứa tên trên chứng nhận, đáp án hoặc điểm. Đây là trạng thái của profile trình duyệt, không phải bản ghi được xác minh riêng cho từng tài khoản trường; trường dùng chung profile cần tính đến việc trạng thái có thể được dùng lại.</p>
-    <p>Một số trạng thái walkthrough đang chạy nằm trong session storage của extension. Để tiếp tục hướng dẫn Grade Entry sau khi đổi ngôn ngữ, extension còn dùng <code>sessionStorage</code> theo tab của trang PowerSchool để giữ tạm trạng thái điều hướng, hướng dẫn và hiển thị, gồm ngữ cảnh URL và nhãn lớp/kỳ báo cáo. Dữ liệu chuyển tiếp chỉ được chấp nhận khi không quá hai phút tuổi và được xóa khi dùng xong hoặc bị xác định không hợp lệ. Kiểm tra tuổi dữ liệu không bảo đảm dữ liệu lưu được xóa đúng thời điểm hai phút sau khi tạo. Đây là session storage của origin trang, tách biệt với storage của extension.</p>
-
-    <h3>7. Chia sẻ và truyền dữ liệu ra ngoài</h3>
-    <p>Build hiện tại không bán hoặc môi giới dữ liệu cá nhân, không chia sẻ dữ liệu học sinh/người giám hộ cho nhà quảng cáo, không truyền dữ liệu học sinh/người giám hộ/tin nhắn/Newsfeed/roster SIS tới backend A.I MY, không dùng analytics/telemetry của bên thứ ba, không dùng Microsoft Graph/Google Identity hoặc dịch vụ cloud identity khác và không đồng bộ cơ sở dữ liệu nickname/hồ sơ học sinh lên cloud.</p>
-    <p>Request roster SIS chỉ đi tới PowerSchool. Giao diện trợ giúp cũng có thể cung cấp link do người dùng chủ động mở tới Microsoft 365 Copilot; Hub Assistant không gắn hoặc prefill nội dung PowerSchool, học sinh, người giám hộ, tin nhắn hay roster vào link đó.</p>
-    <p>Nếu phiên bản tương lai thêm dịch vụ bên ngoài hoặc thay đổi đáng kể cách dùng dữ liệu, policy và store disclosure phải được cập nhật trước khi phát hành phiên bản đó.</p>
-
-    <h3>8. Safeguarding trẻ em</h3>
-    <p>Hub Assistant áp dụng nguyên tắc giảm thiểu dữ liệu. Ngữ cảnh học sinh/người giám hộ chỉ được dùng khi cần cho workflow của giáo viên. Build hiện tại không lập hồ sơ thương mại/hành vi của trẻ em, không hiển thị quảng cáo và không tự động thực hiện hành động cuối cùng như Send, Create Group hoặc Publish.</p>
-    <p>PowerSchool / PowerHub vẫn là nguồn dữ liệu và trạng thái workflow chính thức.</p>
-
-    <h3>9. Quyền kiểm soát của giáo viên</h3>
-    <p>Hub Assistant có thể hướng dẫn bước trung gian nhưng hành động cuối cùng có hậu quả vẫn do giáo viên kiểm soát. Tiện ích không tự động thực hiện Send, Create Group hoặc Publish thay giáo viên.</p>
-
-    <h3>10. Thiết kế bảo mật</h3>
-    <p>Manifest hiện tại dùng Manifest V3 và chỉ yêu cầu quyền <code>storage</code>. Content script được giới hạn ở <code>https://vas.educator.powerschool.com/*</code> và <code>https://vas.powerschool.com/*</code>. Runtime Hub Assistant 1.9.24 được đối chiếu không chứa remote executable code, external analytics, network-fetch logic tới dịch vụ A.I MY, <code>eval</code>, <code>new Function</code>, <code>XMLHttpRequest</code> hoặc <code>WebSocket</code>. Module đổi tên SIS có dùng <code>fetch()</code> tới endpoint roster cùng origin của PowerSchool như mô tả ở trên.</p>
-    <p>Helper session-timeout đã audit chỉ xác thực dialog timeout native; nó không bấm <code>Stay Signed In</code> và không âm thầm kéo dài phiên đăng nhập PowerSchool.</p>
-
-    <h3>11. Lưu giữ và xóa dữ liệu</h3>
-    <p>Hub Assistant không chủ động lưu lâu dài nickname/hồ sơ học sinh hoặc roster SIS trong build hiện tại. Ngữ cảnh định danh, roster response và SIS name map tạm thời chỉ tồn tại khi cần cho workflow trang/browser đang hoạt động. Boolean opt-in đổi tên SIS cùng các setting/tiến độ khác của extension có thể còn trong browser extension storage cho tới khi được xóa bởi quản trị trình duyệt/extension hoặc extension bị gỡ.</p>
-    <p>Tùy chọn vai trò và bản ghi tiến độ/cấp chứng nhận có thể còn cho tới khi xóa extension storage hoặc gỡ extension, tùy hành vi trình duyệt và chính sách thiết bị của trường. Session storage của origin trang được trình duyệt và trang hỗ trợ quản lý riêng; có thể xóa qua chức năng quản lý dữ liệu website. Tệp PNG chứng nhận đã tải phải được người tải hoặc trường quản lý riêng.</p>
-    <p>Các key nickname/hồ sơ cũ được nhắm tới để xóa trong quá trình install/update như mô tả ở trên.</p>
-
-    <h3>12. Hosting website bằng GitHub Pages</h3>
-    <p>Website privacy/support này không chứa analytics, quảng cáo, tracking script, form nhập dữ liệu hoặc external JavaScript của A.I MY. Website được host bằng GitHub Pages. Theo tài liệu GitHub, địa chỉ IP của người truy cập GitHub Pages có thể được GitHub ghi nhận và lưu cho mục đích bảo mật. Việc xử lý ở tầng hosting này tách biệt với Hub Assistant extension.</p>
-
-    <h3>13. Triển khai tại trường</h3>
-    <p>Policy này không giả định mỗi giáo viên có profile Edge/Chrome riêng hoặc một mô hình thiết bị cụ thể. Trường cần đánh giá riêng account, thiết bị dùng chung, access control, retention, user notice và quy trình xử lý sự cố.</p>
-
-    <h3>14. Thay đổi policy</h3>
-    <p>Policy cần được xem lại trước khi phát hành phiên bản thêm permission/host mới, backend ngoài, analytics, identity provider, dữ liệu học sinh lưu lâu dài, student-facing workflow hoặc workflow giáo viên thay đổi đáng kể.</p>
-
-    <h3>15. Liên hệ</h3>
-    <address>Câu hỏi về privacy/support: <a href="mailto:thiaimynguyen734@gmail.com">thiaimynguyen734@gmail.com</a></address>
+    <p>Mã hỗ trợ trang chỉ chạy tại <code>https://vas.educator.powerschool.com/*</code> và <code>https://vas.powerschool.com/*</code>. Tiện ích cũng khai báo quyền truy cập PowerHub. Các quyền phục vụ trợ giúp và hiển thị tại hai website này, không theo dõi trang khác. Mở Filter/Summary không cần thêm quyền website.</p>
+    <h3>7. Chia sẻ, bảo mật và giới hạn sử dụng</h3>
+    <p>Mã đã đối chiếu không gửi nội dung trường, tên, danh sách lớp hoặc lịch nhắc tới A.I MY, dịch vụ phân tích hay quảng cáo. Tiện ích không bán dữ liệu, dùng dữ liệu cho quảng cáo hoặc quyết định tín dụng, hay chạy mã tải từ máy chủ ngoài. Dữ liệu chỉ phục vụ mục đích hỗ trợ giáo viên đã công bố. Việc sử dụng dữ liệu tuân theo Chrome Web Store User Data Policy, gồm yêu cầu Limited Use.</p>
+    <p>Tiện ích không trích xuất mật khẩu, cookie xác thực hoặc token. Yêu cầu PowerSchool dùng phiên đăng nhập được phép hiện có. Tiện ích không âm thầm kéo dài phiên đăng nhập. Trường cần quản lý thiết bị dùng chung, quyền tài khoản và dữ liệu trình duyệt.</p>
+    <p>Giáo viên có thể chủ động mở liên kết Microsoft 365 Copilot. Tiện ích không điền sẵn hay gửi kèm nội dung trường. Website ngoài áp dụng chính sách riêng sau khi được mở. Trình duyệt và hệ điều hành quản lý thông báo tùy chọn; người ở gần thiết bị có thể nhìn thấy thông báo.</p>
+    <h3>8. Quyền kiểm soát và thay đổi</h3>
+    <p>Tiện ích có thể hỗ trợ bước hiển thị trung gian, gồm mở Filter và Summary. Giáo viên vẫn quyết định nhập điểm, Fill, Save, gửi tin, tạo nhóm và đăng bài. Có thể tự đóng Filter/Summary lại trong cùng lớp/kỳ.</p>
+    <p>Trước khi phát hành thay đổi quyền hoặc cách xử lý dữ liệu, cần cập nhật chính sách và khai báo Store. Phải cung cấp thông báo và lấy đồng ý cần thiết trước khi bắt đầu xử lý mới. Chỉ đăng trang này không thay thế việc đó. Rà soát này không xác nhận Store phê duyệt hoặc trường đã triển khai.</p>
+    <h3>9. Website và liên hệ</h3>
+    <p>Website chính sách dùng GitHub Pages, không có phân tích truy cập, quảng cáo, mã chạy hay biểu mẫu của A.I MY. GitHub có thể ghi địa chỉ IP vì bảo mật theo chính sách của họ. Việc này tách biệt với tiện ích.</p>
+    <p>Liên hệ về quyền riêng tư, truy cập, xóa dữ liệu hoặc hỗ trợ: <a href="mailto:thiaimynguyen734@gmail.com">thiaimynguyen734@gmail.com</a>.</p>
   </section>
 </main>
 <footer>

@@ -22,42 +22,28 @@
   </div>
 </header>
 <main id="content">
-  <section class="hero">
-    <h1>Hub Assistant — Privacy & Support</h1>
-    <p>Official privacy, child-safeguarding, and support information for the Hub Assistant browser extension.</p>
-    <p class="meta">Publisher: <strong>A.I MY</strong><br>Reference build: <strong>Hub Assistant 1.9.24 — 22 October 2026 build</strong> · Manifest version 1.9.24<br>Package date: 22 October 2026 · Website policy review: 22 October 2026<br>Contact: <a href="mailto:thiaimynguyen734@gmail.com">thiaimynguyen734@gmail.com</a></p>
+  <section class="hero"><h1>Hub Assistant — Privacy &amp; Support</h1><p>Published by A.I MY · Reviewed 24 October 2026</p><div class="lang-jump"><a href="#en">English</a><a href="#vi">Tiếng Việt</a></div></section>
+  <section id="en" class="card" lang="en">
+    <h2>How Hub Assistant uses information</h2>
+    <p>Hub Assistant helps teachers use VAS PowerSchool and PowerHub with guidance, display assistance and local work reminders.</p>
+    <p>It processes relevant page content, names, relationships and workflow state in your browser. Name assistance can request information from PowerSchool using your existing session. The current development build defaults to automatic name display; original PowerSchool names can be selected in settings.</p>
+    <p>Settings, progress and deadlines are stored locally. Optional desktop reminders can show deadline titles. The bundled chime uses audio playback without microphone access.</p>
+    <p>Grade Entry can open Filter and Summary automatically. Teachers keep control of grade entry, Fill, Save, sending messages and publishing posts.</p>
+    <p>No school data is sent to an A.I MY server or analytics service. No advertising, data sales or persistent student roster database.</p>
+    <p>The development manifest uses <code>storage</code>, <code>alarms</code>, <code>offscreen</code> and optional <code>notifications</code>. It runs on the two supported VAS PowerSchool sites.</p>
+    <p><a href="privacy.html#en">Read the full policy, retention rules and Limited Use statement</a>.</p>
+    <p>This page describes the 24 October development snapshot, not a new Store release. <a href="privacy-20261022.html">Read the earlier package policy</a>.</p>
   </section>
-
-  <section class="card">
-    <h2>About Hub Assistant</h2>
-    <p>Hub Assistant is a teacher-facing browser extension that provides contextual guidance on supported PowerSchool / PowerHub educator pages. It is designed to keep final actions such as Send, Create Group, and Publish under teacher control.</p>
-    <p>Hub Assistant is independently developed by A.I MY. It is not an official PowerSchool, Microsoft, or Google product and does not claim endorsement by those companies.</p>
-  </section>
-
-  <section class="card">
-    <h2>Privacy at a glance</h2>
-    <ul>
-      <li>No advertising or behavioral profiling.</li>
-      <li>No A.I MY analytics or telemetry service.</li>
-      <li>Manifest V3 with only the <code>storage</code> permission; content scripts are scoped to the supported PowerHub and PowerSchool SIS origins.</li>
-      <li>No remote executable code or A.I MY network-fetch path. The SIS name-display feature uses a same-origin PowerSchool roster request only after teacher opt-in.</li>
-      <li>No persistent student nickname/profile or SIS roster database.</li>
-      <li>Student and guardian identity context is processed locally and transiently when needed for teacher workflows.</li>
-      <li>For SIS Vietnamese-name display, only the opt-in boolean is persisted; student names, IDs, Student Code, roster payloads, and name maps remain RAM-only.</li>
-      <li>No student names, guardian names, message content, Newsfeed content, or SIS roster data are sent to an A.I MY backend.</li>
-      <li>Teacher-role settings and completion/issuance state stay in the browser profile. Quiz details are held in memory and cleared before certificate-name entry.</li>
-      <li>The certificate name is used locally; a downloaded PNG still contains the name. Grade Entry language switching uses temporary per-tab site storage.</li>
-    </ul>
-    <p><a href="privacy.html">Read the full Privacy Policy</a></p>
-    <p class="meta">This website describes the Hub Assistant 1.9.24 package reviewed on 22 October 2026. Offline verification is complete; native account and school-workflow acceptance remains pending.</p>
-  </section>
-
-  <section class="card" lang="vi">
-    <h2>Tóm tắt tiếng Việt</h2>
-    <p>Hub Assistant là tiện ích hỗ trợ giáo viên trên các trang PowerSchool / PowerHub được hỗ trợ. Tiện ích không dùng quảng cáo, không dùng analytics/telemetry của A.I MY, không duy trì cơ sở dữ liệu nickname/hồ sơ học sinh hoặc roster SIS lâu dài và không tự động thực hiện hành động cuối cùng như Send, Create Group hoặc Publish.</p>
-    <p>Bản policy này được đối chiếu với gói Hub Assistant 1.9.24 ngày 22/10/2026. Gói đã được kiểm thử offline; nghiệm thu tài khoản và workflow thật vẫn đang chờ. Content script chỉ chạy trên hai origin PowerSchool được hỗ trợ. Khi giáo viên chủ động bật đổi tên tự nhiên tiếng Việt trong SIS, extension gọi roster cùng origin của PowerSchool; dữ liệu roster/name map chỉ ở RAM và chỉ boolean opt-in được lưu.</p>
-    <p>Tùy chọn vai trò và trạng thái hoàn tất/cấp chứng nhận được lưu trong profile trình duyệt. Chi tiết bài ôn tập chỉ ở bộ nhớ và được dọn trước khi nhập tên; tên dùng tạo ảnh cục bộ nhưng ảnh PNG đã tải vẫn chứa tên. Đổi ngôn ngữ Grade Entry dùng dữ liệu website tạm theo tab. Xem policy đầy đủ về lưu giữ và xóa dữ liệu.</p>
-    <p><a href="privacy.html#vi">Đọc Chính sách quyền riêng tư</a> · <a href="safeguarding.html#vi">Đọc tóm tắt safeguarding</a></p>
+  <section id="vi" class="card" lang="vi">
+    <h2>Thông tin tiện ích sử dụng</h2>
+    <p>Hub Assistant hỗ trợ giáo viên trên VAS PowerSchool và PowerHub qua hướng dẫn, hỗ trợ hiển thị và nhắc việc cục bộ.</p>
+    <p>Tiện ích xử lý nội dung trang, tên, quan hệ và trạng thái thao tác cần thiết trong trình duyệt. Hỗ trợ tên có thể đọc thông tin từ PowerSchool bằng phiên đăng nhập hiện có. Bản phát triển mặc định hiển thị tên tự động; có thể chọn tên gốc trong cài đặt.</p>
+    <p>Cài đặt, tiến độ và lịch nhắc được lưu trên thiết bị. Thông báo tùy chọn có thể hiện tên việc. Âm báo chỉ phát tệp có sẵn, không dùng micro.</p>
+    <p>Grade Entry có thể tự mở Filter và Summary. Giáo viên quyết định nhập điểm, Fill, Save, gửi tin và đăng bài.</p>
+    <p>Không gửi dữ liệu trường tới máy chủ A.I MY hoặc dịch vụ phân tích. Không quảng cáo, bán dữ liệu hoặc lưu cơ sở dữ liệu danh sách học sinh lâu dài.</p>
+    <p>Bản phát triển dùng <code>storage</code>, <code>alarms</code>, <code>offscreen</code> và quyền tùy chọn <code>notifications</code>. Tiện ích chạy trên hai website VAS PowerSchool được hỗ trợ.</p>
+    <p><a href="privacy.html#vi">Đọc chính sách đầy đủ, cách lưu/xóa dữ liệu và cam kết Limited Use</a>.</p>
+    <p>Trang này mô tả mã phát triển ngày 24/10, chưa xác nhận phát hành Store mới.</p>
   </section>
 </main>
 <footer>
